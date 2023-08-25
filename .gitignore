@@ -42,12 +42,6 @@ buildNumber.properties
 mvnw
 mvnw.cmd
 
-# Eclipse m2e generated files
-# Eclipse Core
-.project
-# JDT-specific (Eclipse Java Development Tools)
-.classpath
-
 # Compiled class file
 *.class
 

@@ -1,1 +1,1 @@
-# vinychat-api
+# vinychat-api-backend
