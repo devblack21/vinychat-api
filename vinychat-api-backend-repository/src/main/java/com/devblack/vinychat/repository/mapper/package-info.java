@@ -1,0 +1,1 @@
+package com.devblack.vinychat.repository.mapper;
