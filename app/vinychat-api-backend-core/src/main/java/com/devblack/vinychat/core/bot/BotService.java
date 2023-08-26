@@ -9,10 +9,4 @@ public interface BotService {
 
     Message initializeMessage(final Message message);
 
-    Message menuOptions(final Message message);
-
-    boolean mediator(final Message message);
-
-    Message invokeAction(final Message message);
-
 }

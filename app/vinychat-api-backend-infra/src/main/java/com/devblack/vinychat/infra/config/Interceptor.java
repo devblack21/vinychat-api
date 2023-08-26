@@ -25,5 +25,7 @@ public class Interceptor implements HandshakeInterceptor {
     public void afterHandshake(final ServerHttpRequest serverHttpRequest,
                                final ServerHttpResponse serverHttpResponse,
                                final WebSocketHandler webSocketHandler,
-                               final Exception e) {}
+                               final Exception e) {
+
+    }
 }

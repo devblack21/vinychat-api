@@ -1,5 +1,6 @@
 package com.devblack.vinychat.processor.adapter;
 
+import com.devblack.vinychat.core.bot.BotMediator;
 import com.devblack.vinychat.core.processor.SenderMessageProcessor;
 import com.devblack.vinychat.domain.Message;
 import com.devblack.vinychat.processor.dto.MessageDTO;
@@ -20,17 +21,21 @@ public class SenderMessageProcessorAdapter implements SenderMessageProcessor {
 
     @Autowired
     private SimpMessagingTemplate template;
+    @Autowired
+    private BotMediator botMediator;
 
     private final MessageRepository repository = new MessageRepository();
 
     @Override
     public Message send(final Message message) {
 
-      final String ticket = message.getTicketId();
-        System.out.println(message.getTicketId()+" | "+message.getSenderUser()+": "+message.getMessageBody());
+      if (botMediator.mediate(message)) {
+          final String ticket = message.getTicketId();
+          System.out.println(message.getTicketId()+" | "+message.getSenderUser()+": "+message.getMessageBody());
 
-      template.convertAndSend(QUEUE_MESSAGE + ticket, MessageDTOMapper.INSTANCE.mapFrom(message));
-      repository.addMessage(message);
+          template.convertAndSend(QUEUE_MESSAGE + ticket, MessageDTOMapper.INSTANCE.mapFrom(message));
+          repository.addMessage(message);
+      }
 
       return message;
     }

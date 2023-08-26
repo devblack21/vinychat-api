@@ -12,11 +12,10 @@ import java.util.UUID;
 
 import static com.devblack.vinychat.core.constants.ApplicationContants.APPLICATION_JSON;
 import static com.devblack.vinychat.core.routes.Routes.BACKUP_MESSAGES;
-import static com.devblack.vinychat.core.routes.Routes.MESSAGE_ROUTE_MAPPING;
 
 @RestController
-@CrossOrigin("*")
-@RequestMapping(MESSAGE_ROUTE_MAPPING)
+@RequestMapping
+@CrossOrigin(value = "*")
 public class MessageChatController {
 
     private final MessageRepository repository = new MessageRepository();

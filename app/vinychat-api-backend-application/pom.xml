@@ -87,6 +87,7 @@
                     <include>application-dev.properties</include>
                     <include>application-prod.properties</include>
                     <include>messages-pt-br.properties</include>
+                    <include>block-list.txt</include>
                 </includes>
             </resource>
         </resources>

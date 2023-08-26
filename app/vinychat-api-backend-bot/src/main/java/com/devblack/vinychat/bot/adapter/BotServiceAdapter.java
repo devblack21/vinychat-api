@@ -12,7 +12,6 @@ import java.util.UUID;
 
 @Service
 public class BotServiceAdapter implements BotService {
-
     private static final String BOT_USERNAME = "bot";
 
     @Autowired
@@ -41,21 +40,6 @@ public class BotServiceAdapter implements BotService {
         return message;
     }
 
-    @Override
-    public Message menuOptions(final Message message) {
-        return null;
-    }
-
-    @Override
-    public boolean mediator(final Message message) {
-        return false;
-    }
-
-    @Override
-    public Message invokeAction(final Message message) {
-        return null;
-    }
-
     private static String helloMessage() {
 
         return "Olá, tudo bem?" +
@@ -66,7 +50,6 @@ public class BotServiceAdapter implements BotService {
                 "\\n" +
                 "2 - Abrir Ticket de chat";
     }
-
 
 
 }

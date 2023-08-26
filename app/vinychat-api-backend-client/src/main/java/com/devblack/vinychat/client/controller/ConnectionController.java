@@ -9,12 +9,11 @@ import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import static com.devblack.vinychat.core.constants.ApplicationContants.APPLICATION_JSON;
-import static com.devblack.vinychat.core.routes.Routes.CONNECTION_ROUTE_MAPPING;
 import static com.devblack.vinychat.core.routes.Routes.FIRST_CONNECTION;
 
 @RestController
+@RequestMapping
 @CrossOrigin("*")
-@RequestMapping(CONNECTION_ROUTE_MAPPING)
 public class ConnectionController {
 
     @Autowired
