@@ -1,4 +1,4 @@
-package com.devblack.vinychat.bot.adapter;
+package com.devblack.vinychat.bot.utils;
 
 
 import lombok.SneakyThrows;
